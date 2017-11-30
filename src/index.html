@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Amazonia</h1>
+        <p>Amazon occupies or plans to occupy about three dozen different office buildings in and around South Lake Union. Amazon's latest lease is the top six floors of the Macy's building downtown. Click on the buildings for the Amazon office names and other details.</p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=14>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          
+          </leaflet-map>
+
+        </div>
+        <aside class="legend">
+          <h1>What Amazon...</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #e6550d"></span> ...owns</li>
+            <li>
+              <span class="block" style="background-color: #fdae6b"></span> ...is developing</li>
+            <li>
+              <span class="block" style="background-color: #ffeda0"></span> ...is leasing</li>
+            <li>
+              <span class="block" style="background-color: #bfd730"></span> ...plans to occupy</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Source: Seattle Times staff research
+        <span class="credit">THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>

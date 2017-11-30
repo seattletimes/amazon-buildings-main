@@ -1,0 +1,19 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "lamp-coffee"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2017/business/amazon-main"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "production": true,
+  "embedded": true,
+  "slug": "",
+  "tags": []
+}
