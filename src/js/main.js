@@ -38,8 +38,8 @@ var getColor = function(d) {
      		value == "2" ? '#ffeda0' :
      		value == "3" ? '#fdae6b' :
         value == "4" ? '#bfd730' :
-        value == "5" ? '#bfd730' :
-        value == "6" ? '#fdae6b' :
+        // value == "5" ? '#bfd730' :
+        // value == "6" ? '#fdae6b' :
             // value >= 10.00 ? '#addd8e' :
             // value >= 0 ? '#f7fcb9' :
              
@@ -49,29 +49,7 @@ var getColor = function(d) {
     }
   };
 
-  var getStroke = function(d) {
-    var value = d[all];
-    if (typeof value == "string") {
-      value = Number(value.replace(/,/, ""));
-    }
-    console.log(value)
-    if (typeof value != "undefined") {
 
-      // condition ? if-true : if-false;
-     return value == "1" ? '1' :
-        value == "2" ? '1' :
-        value == "3" ? '1' :
-        value == "4" ? '1' :
-        value == "5" ? '2.5' :
-        value == "6" ? '2.5' :
-            // value >= 10.00 ? '#addd8e' :
-            // value >= 0 ? '#f7fcb9' :
-             
-             '1' ;
-    } else {
-      return "1"
-    }
-  };
 
 // ICH code for popup template if needed----------
 var ich = require("icanhaz");
@@ -85,7 +63,7 @@ var onEachFeature = function(feature, layer) {
 var style = function(feature) {
     var s = {
       fillColor: getColor(feature.properties),
-      weight: getStroke(feature.properties),
+      weight: 1,
       opacity: .5,
       color: '#000',
       fillOpacity: 0.6
@@ -100,6 +78,4 @@ var style = function(feature) {
 
 
  map.scrollWheelZoom.disable();
- map.setView([47.6124, -122.3381], 15);
-
- // map.fitBounds(geojson.getBounds())
+ map.setView([47.6154, -122.3381], 15);
