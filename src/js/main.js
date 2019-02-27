@@ -37,8 +37,8 @@ var getColor = function(d) {
      return value == "1" ? '#e6550d' :
      		value == "2" ? '#ffeda0' :
      		value == "3" ? '#fdae6b' :
-        value == "4" ? '#bfd730' :
-        // value == "5" ? '#bfd730' :
+        value == "4" ? '#e2cc4b' :
+        value == "5" ? '#9fdc30' :
         // value == "6" ? '#fdae6b' :
             // value >= 10.00 ? '#addd8e' :
             // value >= 0 ? '#f7fcb9' :
@@ -78,4 +78,4 @@ var style = function(feature) {
 
 
  map.scrollWheelZoom.disable();
- map.setView([47.6154, -122.3381], 15);
+ map.setView([47.6140, -122.3381], 14);
